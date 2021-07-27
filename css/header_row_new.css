@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", "Roboto", "Georgia";
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  min-width: 1024px;
+  margin: 0px auto;
+}
+header{
+  width: 100%;
+  height: 150px;
+  background-color: rgba(205, 185, 176, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+div.logo{
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+}
+div.logo a{
+  width: fit-content;
+  height: fit-content;
+  display: inline-flex;
+}
+div.logo a img{
+  width: 100%;
+}
+/* 基本按鈕樣式 */
+button.hamburger_icon{
+  border: 0px;
+  width: 44px;
+  height: 44px;
+  margin: 25px 10px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  display: none; 
+}
+
+/* 每一條橫線的樣式 */
+button.hamburger_icon span.-hr{
+  height: 2px;
+  width: 80%;
+  background-color: rgb(198, 135, 143);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 最上面那條線的樣式 */
+button.hamburger_icon span.-hr.-top{
+  top: 25%;
+}
+
+/* 最下面那條線的樣式 */
+button.hamburger_icon span.-hr.-bottom{
+  top: 75%;
+}
+
+/* -on 的狀態 */
+/* 上方的線 */
+button.hamburger_icon.-on span.-hr.-top{
+  transform-origin: top left;
+  top: 5px;
+  left: 6px;
+  width: 102%;
+  transform: rotate(45deg);
+}
+/* 中間的線 */
+button.hamburger_icon.-on span.-hr.-middle{
+  opacity: 0;
+}
+/* 下方的線 */
+button.hamburger_icon.-on span.-hr.-bottom{
+  transform-origin: top left;
+  bottom: 5px;
+  left: 6px;
+  width: 102%;
+  transform: rotate(-45deg);
+  top: auto;
+}
+header nav{
+  margin: 0 auto 10px auto;
+}
+nav ul.navigator{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+ul.navigator li{
+  height: fit-content;
+  margin: 0px 25px;
+  font-size: 20pt;
+  letter-spacing: 0.5px;
+}
+ul.navigator li:hover a.nav::after{
+  width: 100%;
+}
+ul.navigator li.page_on{
+  background-color: rgba(205, 185, 176, 0.5);
+}
+ul.navigator li a.nav{
+  text-decoration: none;
+  color: rgb(198, 135, 143);
+}
+ul.navigator li a.nav::after{
+  content: "";
+  display: block;
+  background-color: rgba(78, 118, 166, 0.7);
+  width: 0%;
+  height: 2px;
+  border-radius: 50px;
+  z-index: -5;
+  transition: all 0.3s;
+}
+ul.navigator li.collections{
+  color: rgb(198, 135, 143);
+  cursor: pointer;
+  z-index: 3;
+}
+li.collections ul.items{
+  width: 100%;
+  height: calc(100vh - 130px);
+  padding: 0px;
+  margin: 0px auto;
+  list-style: none;
+  background-color: rgba(255, 250, 240, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  display: none;
+  position: absolute;
+  left: 0px;
+  z-index: 3;
+  cursor: auto;
+}
+li.collections:hover ul.items{
+  display: flex;
+}
+ul.items li{
+  margin: 50px 0 0 0;
+}
+ul.items li a{
+  color: rgb(78, 118, 166);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+ul.items li a:hover{
+  text-decoration: underline;
+}
+ul.items li a img{
+  width: 258px;
+  height: 340px;
+  border-radius: 2px;
+}
+nav > ul >li.collections:hover ul.items li{
+  /* background-color: rgba(255, 250, 240, 1); */
+  display: block;
+}
+@media screen and (min-width:320px) and (max-width: 1023px){
+  header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    background-color: rgba(205, 185, 176, 1);
+    z-index: 30;
+  }
+  header div.logo{
+    margin-top: 0px;
+    height: 80px;
+    margin: 10px;
+  }
+  div.logo a img{
+    width: 80px;
+    height: 70px;
+    margin: 5px;
+  }
+  button.hamburger_icon{
+    display: block;
+    float: right;
+    z-index: 9;
+  }
+  header nav{
+    width: 100%;
+    height: 600px;
+    margin-top: 80px;
+    visibility: hidden;
+    position: fixed;
+    top: -300px;
+    right: 0px;
+    transition: 0.5s;
+  }
+  nav.-on{
+    /* width: fit-content; */
+    visibility: visible;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background-color: rgba(255, 250, 240, 1);
+  }
+  nav ul.navigator{
+    width: fit-content;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  ul.navigator a{
+    text-decoration: none;
+    color: rgb(198, 135, 143);
+  }
+  ul.navigator li{
+    margin: 15px 0px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    font-size: 20pt;
+    letter-spacing: 0.5px;
+    /* color: rgb(198, 134, 142); */
+  }
+  ul.navigator > li > a:hover{
+    text-decoration: underline;
+  }
+  div.collections{
+    position: relative;
+  }
+  div.collections ul.items{
+    padding: 0px;
+    z-index: 20;
+  }
+  div.collections ul.items li{
+    display: block;
+    text-align: left;
+    display: none;
+    position: relative;
+    padding-left: 20px;
+    margin: 0px;
+  }
+  ul.items li:hover{
+    text-decoration: underline;
+  }
+  ul.items li a{
+    color: rgb(78, 118, 166);
+    text-decoration: none;
+  }
+  nav > ul >li.collections:hover div.collections ul li{
+    display: block;
+    z-index: 2;
+  }
+  li.collections ul.items{
+    display: none;
+  }
+  li.collections:hover ul.items{
+    display: block;
+  }
+  ul.items li a img{
+    display: none;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1279px){
+  ul.items li a img{
+    width: 129px;
+    height: 170px;
+  }
+}
+@media screen and (min-width:1280px) and (max-width: 1439px){
+  ul.items li a img{
+    width: 172px;
+    height: 227px;
+  }
+}

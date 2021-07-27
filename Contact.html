@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>CONTACT</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/header_row_new.css">
+  <link rel="stylesheet" href="./css/Contact.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <div><img class="logo" src="./Gelao_logo.svg" alt="error"></div>
+      </a>
+    </div>
+    <button type="button" class="hamburger_icon">
+      <span class="-hr -top"></span>
+      <span class="-hr -middle"></span>
+      <span class="-hr -bottom"></span>
+    </button>
+    <nav class="nav">
+      <ul class="navigator">
+        <li><a href="About.html" class="nav">ABOUT</a></li>
+        <li class="collections" onclick="">COLLECTIONS
+          <ul class="items">
+            <li><a href="Japanese.html"><img src="./img/collection/chinese.jpg">Chinese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/jp.jpg">Japanese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/kr.jpg">Korean</a></li>
+            <li><a href="#"><img src="./img/collection/linli.jpg">Linli Wedding</a></li>
+            <li><a href="#"><img src="./img/collection/chana.jpg">Chana Marelus</a></li>
+          </ul>         
+        </li>
+        <li><a href="venue_rental.html" class="nav">VENUE RENTAL</a></li>
+        <li><a href="Trend_Press.html" class="nav" >TREND / PRESS</a></li>
+        <li class="page_on"><a href="Contact.html" class="nav">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+      <div class="banner">
+          <img src="./img/boutique_02.jpg">
+      </div>
+      <h1>Contact</h1>
+      <div class="content_all">
+          <div class="left">
+              <img src="./store.jpeg" alt="">
+          </div>
+          <div class="right">
+              <ul>
+                  <li> <img src="./icons/phone_2.png" alt=""> <span>Tel: <span class="number">+33 140 737 373</span></span></li>
+                  <li> <img src="./icons/email.png" alt=""> <span>Email: <span class="number">gelao.2020@gmail.com</span></span></li>
+                  <li> <img src="./icons/address.png" alt=""> <span>Address: <span class="number">N34 Avenue Montaigne, Paris 75008</span></span></li>
+              </ul>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855.8292111800722!2d2.3077441576324906!3d48.867003629175386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdb48446f7f%3A0xee0d7f73871e5ca8!2z5YWL6YeM5pav5rGAwrfov6rlpacg5be06buO57i95YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1591017345374!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+      </div>
+      <hr>
+      <div class="form_all">
+          <img src="./icons/email.png" alt="">
+          <h2>Make an appointment</h2>
+          <p>Please leave your message, we'll contact you within 3 workdays</p>
+          <form action="#" method="post" class="contact">
+              <div class="row">
+                  <label for="name">Name: </label>
+                  <input type="text" name="name" id="name" placeholder="Name">
+              </div>
+              <div class="row">
+                  <label for="phone">Phone: </label>
+                  <input type="text" name="phone" id="phone" placeholder="Phone">
+              </div>
+              <div class="row">
+                  <label for="email">Email: </label>
+                  <input type="email" name="email" id="email" placeholder="Email">
+              </div>
+              <div class="row">
+                  <label for="message">Message: </label>
+                  <textarea name="message" cols="30" rows="5" id="message" placeholder="Your Message"></textarea>
+              </div>
+              <div class="button">
+                  <button type="submit">Submit</button>
+                  <div class="shadow"></div>
+              </div>
+          </form>
+      </div>
+  </main>   
+  <footer>
+    <div class="footer_item">
+      <a href="index.html">
+        <img src="./Gelao_logo.svg">
+      </a>
+      <div class="column">
+        <div class="social_web">
+          <img src="./icons/fb.png">
+          <img src="./icons/ig.png">
+          <img src="./icons/Line.png">
+        </div>
+        <br>
+        <span>Copyright © 2020 Gelao. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  // jQuery 版本：DOM 載入完成之後執行
+    $(function(){
+    // 按鈕狀態的切換
+      $("button.hamburger_icon").on("click", function(){
+      
+        $(this).toggleClass("-on");
+        $(".nav").toggleClass("-on");
+      
+      });
+    });
+  </script>
+</body>
+</html>

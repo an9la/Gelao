@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>About</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/header_row_new.css">
+  <link rel="stylesheet" href="./css/About.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <div><img class="logo" src="./Gelao_logo.svg" alt="error"></div>
+      </a>
+    </div>
+    <button type="button" class="hamburger_icon">
+      <span class="-hr -top"></span>
+      <span class="-hr -middle"></span>
+      <span class="-hr -bottom"></span>
+    </button>
+    <nav class="nav">
+      <ul class="navigator">
+        <li class="page_on"><a href="About.html" class="nav">ABOUT</a></li>
+        <li class="collections" onclick="">COLLECTIONS
+          <ul class="items">
+            <li><a href="Japanese.html"><img src="./img/collection/chinese.jpg">Chinese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/jp.jpg">Japanese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/kr.jpg">Korean</a></li>
+            <li><a href="#"><img src="./img/collection/linli.jpg">Linli Wedding</a></li>
+            <li><a href="#"><img src="./img/collection/chana.jpg">Chana Marelus</a></li>
+          </ul>         
+        </li>
+        <li><a href="venue_rental.html" class="nav">VENUE RENTAL</a></li>
+        <li><a href="Trend_Press.html" class="nav" >TREND / PRESS</a></li>
+        <li><a href="Contact.html" class="nav">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+        <img src="./img/boutique_02.jpg">
+    </div>
+    <h1>About Gelao</h1>
+    <div class="brief">
+        <div class="left">
+          <img src="./Gelao_logo.svg">
+        </div>
+        <div class="right">
+          <p>Founded 2015</p>
+          <ul>
+            <li>2015/6 - Online renting service</li>
+            <li>2016/1 - Authorized by Linli Wedding</li>
+            <li>2017/1 - Authorized by Chana Marelus</li>
+            <li>2018/1 - Cover brand of Vogue Taiwan</li>
+            <li>2019/1 - Cover brand of Elle Taiwan and British</li>
+            <li>2020/1 - Cover brand of Harpers Bazar</li>
+          </ul>
+        </div>
+    </div>
+    <h1>Who fit Gelao</h1>
+    <div class="people">
+        <div class="row">
+          <div class="safari line">
+            <!-- <span class="ta">Couple</span> -->
+            <img src="./img/people/CP.jpg" class="border">
+          </div>
+          <hr>
+          <div class="safari line">
+            <img src="./img/people/family.jpg" class="border">
+          </div>
+        </div>
+        <div class="row">
+          <div class="safari">
+            <img src="./img/people/sisters.jpg">
+          </div>
+          <hr>
+          <div class="safari">
+            <img src="./img/people/Personal.jpg">
+          </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer_item">
+      <a href="index.html">
+        <img src="./Gelao_logo.svg">
+      </a>
+      <div class="column">
+        <div class="social_web">
+          <img src="./icons/fb.png">
+          <img src="./icons/ig.png">
+          <img src="./icons/Line.png">
+        </div>
+        <br>
+        <span>Copyright © 2020 Gelao. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  // jQuery 版本：DOM 載入完成之後執行
+    $(function(){
+    // 按鈕狀態的切換
+      $("button.hamburger_icon").on("click", function(){
+      
+        $(this).toggleClass("-on");
+        $(".nav").toggleClass("-on");
+      
+      });
+    });
+  </script>
+</body>
+</html>

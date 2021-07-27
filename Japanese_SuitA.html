@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese | Gelao</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/header_row_new.css">
+  <link rel="stylesheet" href="./css/Japanese_SuitA.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <div><img class="logo" src="./Gelao_logo.svg" alt="error"></div>
+      </a>
+    </div>
+    <button type="button" class="hamburger_icon">
+      <span class="-hr -top"></span>
+      <span class="-hr -middle"></span>
+      <span class="-hr -bottom"></span>
+    </button>
+    <nav class="nav">
+      <ul class="navigator">
+        <li><a href="About.html" class="nav">ABOUT</a></li>
+        <li class="collections" onclick="">COLLECTIONS
+          <ul class="items">
+            <li><a href="Japanese.html"><img src="./img/collection/chinese.jpg">Chinese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/jp.jpg">Japanese</a></li>
+            <li><a href="Japanese.html"><img src="./img/collection/kr.jpg">Korean</a></li>
+            <li><a href="#"><img src="./img/collection/linli.jpg">Linli Wedding</a></li>
+            <li><a href="#"><img src="./img/collection/chana.jpg">Chana Marelus</a></li>
+          </ul>         
+        </li>
+        <li><a href="venue_rental.html" class="nav">VENUE RENTAL</a></li>
+        <li><a href="Trend_Press.html" class="nav" >TREND / PRESS</a></li>
+        <li><a href="Contact.html" class="nav">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+      <img src="./img/Japanese/banner.jpeg">
+    </div>
+    <div class="japan_all">
+      <aside>
+        <ul>
+          <li><a href="Japanese.html"><img src="./img/logo_icon.svg">Chinese</a></li>
+          <li><a href="Japanese.html"><img src="./img/logo_icon.svg" class="on_page">Japanese</a></li>
+          <li><a href="Japanese.html"><img src="./img/logo_icon.svg">Korean</a></li>
+          <li><a href="#"><img src="./img/logo_icon.svg">Linli Wedding</a></li>
+          <li><a href="#"><img src="./img/logo_icon.svg">Chana Marelus</a></li>
+        </ul>
+        <select>
+          <option>Chinese</option>
+          <option selected>Japanese</option>
+          <option>Korean</option>
+          <option>Linli Wedding</option>
+          <option>Chana Marelus</option>
+        </select>
+      </aside>
+      <div class="item">
+        <div class="row">
+          <div class="left">
+            <img src="./img/Japanese/K_01.jpeg" class="slide onload">
+            <img src="./img/Japanese/K_02.jpeg" class="slide">
+            <img src="./img/Japanese/K_03.jpeg" class="slide">
+          </div>
+          <div class="right">
+            <span class="title">Suit A</span>
+            <section>The bright red color that is indispensable for celebrations is an auspicious color that also has an amulet meaning. The colorful flowers blooming in the paradise are drawn, and this kimono expresses the wish of "love and happiness."
+            <br>
+            <br>
+            The design is more appealing to those of medium to high height. Also, it is a recommended color for fair complexion.
+			</section>
+			<br>
+			<span class="max">* Max renting duration: 30 days</span>
+            <span class="price">Price: $1200/Day</span>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="calendar">
+      <div class="left">
+        <div class="cal_button_area">
+          <!-- <span>選擇日期</span> -->
+          <button class="pre_month">Pre</button>
+          <select name="month" class="sel_year">
+          </select>
+          <select name="month" class="sel_month">
+            <option value="0">January</option>
+            <option value="1">Febuary</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+          </select>
+          <button class="next_month">Next</button>
+          <button class="clear_all">Clear</button>
+        </div>
+        <div class="calendar_area">
+          <table>
+            <thead>
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right">
+        <span class="start_date">Start date：</span>
+        <span class="end_date">End date：</span>
+        <span class="count_date">Total：</span>
+		<span class="price_all">Price：</span>
+		<div class="button">
+            <a href="#">Start payment</a>
+            <div class="shadow"></div>
+          </div>
+      </div>
+    </div>  
+  </main>
+  <footer>
+    <div class="footer_item">
+      <a href="index.html">
+        <img src="./Gelao_logo.svg">
+      </a>
+      <div class="column">
+        <div class="social_web">
+          <img src="./icons/fb.png">
+          <img src="./icons/ig.png">
+          <img src="./icons/Line.png">
+        </div>
+        <br>
+        <span>Copyright © 2020 Gelao. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  // jQuery 版本：DOM 載入完成之後執行
+    $(function(){
+    // 按鈕狀態的切換
+      $("button.hamburger_icon").on("click", function(){
+      
+        $(this).toggleClass("-on");
+        $(".nav").toggleClass("-on");
+      
+      });
+    });
+	</script>
+	<script type="text/javascript" src="./js/calendar.js"></script>
+</body>
+</html>
